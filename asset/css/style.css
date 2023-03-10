@@ -1,0 +1,18 @@
+body{
+    background-color: cornflowerblue;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    border-color: black;
+}
+.fizz_buzz{
+    background-color: brown;
+}
+.buzz{
+    background-color: yellow;
+}
+.fizz{
+    background-color: aqua;
+}

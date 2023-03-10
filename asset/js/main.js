@@ -5,29 +5,30 @@
 
 //Scrivere in console.log numeri da 1 a 100
 const ulEl = document.createElement("ul");
-ulEl.classList.add (" d-flex flex-wrap")
+const card = document.getElementById('card')
+ulEl.className += ('d-flex flex-wrap')
 let fizz = 'fizz';
 let buzz = 'buzz';
 let fizzBuzz = 'fizzbuzz';
 
-for (let i = 1; i < 100; i++) {
+for (let i = 1; i <= 100; i++) {
     const liEl = document.createElement("li")
-    liEl.classList.add (" border-1 m-1 p-1 d-flex justify-content-center align-items-center")
+    liEl.className += ("d-flex m-2 justify-content-center align-items-center box border border-1")
     ulEl.append(liEl)
 
     if (i % 3 == 0 && i % 5 == 0) {
-        liEl.innerHTML = `${fizzbuzz}`
-        liEl.classList.add (" frizz_box")
+        liEl.innerHTML = `${fizzBuzz}`
+        liEl.classList.add ("fizz_buzz")
     } else if (i % 3 == 0) {
         liEl.innerHTML = `${fizz}`
-        iEl.classList.add (" box")
+        liEl.classList.add ("buzz")
     } else if (i % 5 == 0) {
         liEl.innerHTML = `${buzz}`
-        iEl.classList.add (" frizz")
+        liEl.classList.add ("fizz")
     }
     else{
         liEl.innerHTML = `${i}`
     }
 }
 console.log(ulEl);
-document.body.prepend(ulEl)
+card.prepend(ulEl)
